@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/image/photo_garde.jpg);
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 1.5s ease;
+}
+p {
+  color: white;
+  font-family: cursive;
+  font-size: 34px;
+  margin-left: 11em;
+}
+span {
+  font-size: 70px;
+  color: white;
+  margin-right: 2vw;
+  cursor: pointer;
+  padding: 1em;
+}
+span:hover {
+  font-size: 90px;
+  font-weight: bold;
+  color: blueviolet;
+}
+.text_accueil {
+  width: 75%;
+  color: white;
+  font-size: 34px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.arrow {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+.hidden {
+  transform: translateX(
+    -100%
+  ); /* Fait glisser la div container hors de l'écran */
+  opacity: 0; /* Réduit l'opacité */
+}
