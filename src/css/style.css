@@ -92,6 +92,7 @@ aside footer {
   margin-top: 0.5em;
   padding: 0.5em 0.5em 0 0.5em;
   border-top: solid 1px lightgrey;
+  margin-bottom: 0.5em;
 }
 aside footer a {
   text-decoration: none;
