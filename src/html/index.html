@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Just+Another+Hand&family=Just+Me+Again+Down+Here&family=Kaushan+Script&family=Kavivanar&display=swap"
       rel="stylesheet"
     />
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <title>Portefolio -- Ludivine CHOMIK</title>
@@ -28,7 +30,7 @@
           <h2 class="kaushan">Dev Fullstack</h2>
         </div>
 
-        <blockquote class="kavivanar">
+        <blockquote>
           “Happiness can be found even in the darkest of times, if one only
           remembers to turn on the light.” - Dumbledore.
         </blockquote>
@@ -54,12 +56,12 @@
     </aside>
     <nav>
       <ul>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="http://" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
       </ul>
       <dialog id="modal_theme">
         <button id="btn_close_theme" autofocus>X</button>
@@ -67,7 +69,62 @@
       </dialog>
       <button id="btn_open_theme" class="kavivanar">thème</button>
     </nav>
-    <main></main>
+    <main>
+      <article id="about_me">
+        <!-- TODO :changer pour mettre img1 a grid-area 1/1/ et text about me a coter et inverser avec hobbit et img2 -->
+          <section id="img_about_me">
+              <img src="../assets/image/avatar2.png" alt="" id="img2"/>
+            </section>
+        <section id="txt_about_me">
+          <h2 class="tt1">About me</h2>
+          <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique architecto obcaecati consectetur, id deserunt corrupti voluptas quos est facere excepturi deleniti, dolor eaque perferendis in atque tempora praesentium magnam nemo!</p>
+          <h2 class="tt2">my hobbies</h2>
+          <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat deleniti eaque soluta aspernatur maiores tempore quas repudiandae suscipit, cum aliquid sit, accusamus, veniam quae. Esse numquam perferendis id veniam cum!</p>
+        </section>
+      </article>
+      <article id="realisations">
+          <div class="card">
+            <p class="titleCard just-me-again-down-here">Projet 1</p>
+            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <p class="txtCard">un projet fantastique et épanouissant</p>
+            <a href="#" class="btnCard">en savoir plus</a>
+          </div>
+          <div class="card">
+            <p class="titleCard just-me-again-down-here">Projet 2</p>
+            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <p class="txtCard">un projet fantastique et épanouissant</p>
+            <a href="#" class="btnCard">en savoir plus</a>
+          </div>
+          <div class="card">
+            <p class="titleCard just-me-again-down-here">Projet 3</p>
+            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <p class="txtCard">un projet fantastique et épanouissant</p>
+            <a href="#" class="btnCard">en savoir plus</a>
+          </div>
+          <div class="card">
+            <p class="titleCard just-me-again-down-here">Projet 4</p>
+            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <p class="txtCard">un projet fantastique et épanouissant</p>
+            <a href="#" class="btnCard">en savoir plus</a>
+          </div>
+      </article>
+      <article id="skills">
+        <section></section>
+        <section></section>
+      </article>
+      <article id="veille">
+        <section></section>
+        <section></section>
+      </article>
+      <article id="techCv">
+        <section></section>
+        <section></section>
+      </article>
+      <article id="techno"></article>
+        <section></section>
+        <section></section>
+      </article>
+    </main>
     <footer></footer>
   </body>
   <script src="../js/modal_btn_theme.js"></script>

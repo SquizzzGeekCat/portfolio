@@ -20,36 +20,39 @@
   font-style: normal;
 }
 
-.edu400 {
-  font-family: "Edu AU VIC WA NT Guides", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.edu500 {
-  font-family: "Edu AU VIC WA NT Guides", cursive;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-.edu600 {
-  font-family: "Edu AU VIC WA NT Guides", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.edu700 {
-  font-family: "Edu AU VIC WA NT Guides", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 /* general */
 body {
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 2em;
+  /* changer le gap au final a 3 */
+  grid-template-columns: repeat(10, 10fr);
+  grid-template-rows: repeat(10, 10fr);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Just Me Again Down Here", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+p,
+label,
+a,
+blockquote {
+  font-family: "Kavivanar", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
+/* slide accueil */
+.slide_accueil {
+  display: none;
+}
 /* title */
 aside section h1 {
   font-size: xx-large;
@@ -73,9 +76,10 @@ aside section h2 {
 }
 /* aside */
 aside {
-  padding: 5px;
+  padding-inline: 5px;
   width: 15%;
   height: 100vh;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,18 +129,14 @@ aside section {
   opacity: 0.75;
 }
 nav {
-  position: absolute;
-  top: 0;
-  left: 20%;
-  width: 79vw;
-  padding: 3px;
+  grid-area: 1 / 4 / 2 / 11;
   display: flex;
+  height: 15vh;
   justify-content: space-around;
   border: solid 1px transparent;
   border-bottom-left-radius: 15px;
   border-right-width: 0px;
   border-left-width: 0px;
-
   align-items: center;
   background-color: #ff632e;
 }
@@ -171,5 +171,102 @@ li:hover {
   background-color: #84c08e;
   border-color: white;
   color: white;
+  box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
+}
+/* main */
+
+main {
+  grid-area: 2/4/10/10;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(10, 2fr);
+  grid-template-rows: repeat(10, 2fr);
+}
+/* about me */
+#about_me {
+  grid-area: 1/1/4/11;
+  display: flex;
+  justify-content: space-between;
+}
+#img_about_me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+#img_about_me img {
+  width: 100%;
+  height: fit-content;
+  border: solid 1px #ff632e;
+  border-radius: 15px;
+}
+
+/* txt_about_me */
+
+#txt_about_me {
+  width: 55%;
+  border: solid 1px #ff632e;
+  border-radius: 15px;
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+  grid-template-areas:
+    "tt1 tt1 tt1 ." "p1 p1 p1 p1" ". . . ."
+    ". tt2 tt2 tt2" "p2 p2 p2 p2";
+}
+.tt1 {
+  grid-area: tt1;
+  font-size: 2.5em;
+}
+.tt2 {
+  grid-area: tt2;
+  font-size: 2.5em;
+}
+.p1 {
+  grid-area: p1;
+}
+.p2 {
+  grid-area: p2;
+}
+/* realisations */
+#realisations {
+  grid-area: 4/1/6/11;
+  display: flex;
+  align-items: center;
+  border: solid 1px #f4c581;
+  border-radius: 15px;
+  background-color: #f4c581;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1em;
+  border: solid 2px #fbf1d6;
+  border-radius: 15px;
+  margin-inline: 0.5em;
+}
+.imgCard {
+  width: 50%;
+}
+.txtCard {
+  text-align: center;
+  color: #fbf1d6;
+}
+.btnCard {
+  color: #fbf1d6;
+  border: solid 1px #fbf1d6;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+.titleCard {
+  color: #fbf1d6;
+  font-size: 3em;
+}
+.btnCard:hover {
+  background-color: #ff632e;
+
   box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
 }
