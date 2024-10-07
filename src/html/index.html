@@ -63,18 +63,21 @@
         <li><a href="#" class="navLink kavivanar">qwerty</a></li>
         <li><a href="#" class="navLink kavivanar">qwerty</a></li>
       </ul>
-      <dialog id="modal_theme">
-        <button id="btn_close_theme" autofocus>X</button>
+      <dialog id="modal_theme" class="dialog_box">
+        <button class="btn_close" autofocus>X</button>
         <p>Cette boîte de dialogue modale a un arrière-plan festif !</p>
       </dialog>
       <button id="btn_open_theme" class="kavivanar">thème</button>
     </nav>
     <main>
       <article id="about_me">
+        <!-- TODO: changer image de about me mettre une en z-index au fond une au milieu et une devant et quand hover sur une les z-index des autres change -->
         <!-- TODO :changer pour mettre img1 a grid-area 1/1/ et text about me a coter et inverser avec hobbit et img2 -->
           <section id="img_about_me">
-              <img src="../assets/image/avatar2.png" alt="" id="img2"/>
-            </section>
+            <img src="../assets/image/avatar1.png" alt="" id="img1"/>
+            <img src="../assets/image/avatar2.png" alt="" id="img2"/>
+            <img src="../assets/image/avatar4.png" alt="" id="img4"/>
+          </section>
         <section id="txt_about_me">
           <h2 class="tt1">About me</h2>
           <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique architecto obcaecati consectetur, id deserunt corrupti voluptas quos est facere excepturi deleniti, dolor eaque perferendis in atque tempora praesentium magnam nemo!</p>
@@ -109,23 +112,103 @@
           </div>
       </article>
       <article id="skills">
-        <section></section>
+        <section>
+          <div class="mb-1 text-lg font-medium">Large</div>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
+            <div class="h-4 bg-orange rounded-full " style="width: 45%"></div>
+          </div>
+        </section>
         <section></section>
       </article>
       <article id="veille">
-        <section></section>
+        <h2>Mes veilles technologiques</h2>
+        <section>
+          <div id="veille1" class="veille_technos">
+          <dialog >
+            <button class="btn_close" autofocus>X</button>
+            <p>Your in the veille 1</p>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 1</button>
+        </div>
+        <div id="veille2" class="veille_technos">
+          <dialog class="dialog_box">
+            <p>Your in the veille 2</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 2</button>
+        </div>
+        <div id="veille3" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 3</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 3</button>
+        </div>
+        <div id="veille4" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 4</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 4</button>
+        </div>
+        <div id="veille5" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 5</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog> 
+          <button class="btn_veille kavivanar">Veille 5</button>
+        </div>
+        <div id="veille6" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 6</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 6</button>
+        </div>
+        <div id="veille7" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 7</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 7</button>
+        </div>
+        <div id="veille8" class="veille_technos">
+          <dialog >
+            <p>Your in the veille 8</p>
+            <button class="btn_close" autofocus >X</button>
+          </dialog>
+          <button class="btn_veille kavivanar">Veille 8</button>
+        </div>
+      </section>
+      </article>
+      <article id="techno">
         <section></section>
       </article>
-      <article id="techCv">
-        <section></section>
-        <section></section>
-      </article>
-      <article id="techno"></article>
-        <section></section>
+      <article id="techCv"></article>
         <section></section>
       </article>
     </main>
     <footer></footer>
   </body>
   <script src="../js/modal_btn_theme.js"></script>
+  <script src="../js/open_veille.js"></script>
+  <script src="../js/imgAnimate.js"></script>
+  <script >
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            transparent: "transparent",
+            current: "currentColor",
+            white: "#ffffff",
+            orange: "#ff632e",
+            sand: "#f4c581",
+            likewhite: "#fbf1d6",
+            palegreen: "#c8dfbb",
+            grass: "#84c08e",
+          },
+        },
+      },
+    };
+  </script>
 </html>

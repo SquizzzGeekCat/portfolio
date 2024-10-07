@@ -40,6 +40,9 @@ h6 {
   font-weight: 400;
   font-style: normal;
 }
+h2 {
+  font-size: 2em;
+}
 p,
 label,
 a,
@@ -189,10 +192,37 @@ main {
   justify-content: space-between;
 }
 #img_about_me {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 30%;
+}
+#img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: hue-rotate(45deg) blur(3px);
+}
+#img2 {
+  position: absolute;
+  top: 5em;
+  left: 8em;
+  z-index: 2;
+}
+
+#img4 {
+  position: absolute;
+  top: 10em;
+  left: -4em;
+  z-index: 0;
+  filter: hue-rotate(45deg) blur(3px);
+}
+#img1,
+#img2,
+#img4 {
+  transition: filter 0.8s ease-out;
 }
 #img_about_me img {
   width: 100%;
@@ -200,7 +230,6 @@ main {
   border: solid 1px #ff632e;
   border-radius: 15px;
 }
-
 /* txt_about_me */
 
 #txt_about_me {
@@ -268,5 +297,50 @@ main {
 .btnCard:hover {
   background-color: #ff632e;
 
+  box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
+}
+/* skills */
+#skills {
+  display: none;
+}
+/* veille technos */
+#veille {
+  grid-area: 6/1/8/11;
+  border: solid 2px #f4c581;
+  border-radius: 15px;
+  margin-top: 1em;
+}
+#veille h2 {
+  text-align: center;
+  font-size: 2em;
+}
+#veille section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.veille_technos {
+  background-image: url(../assets/image/pumpkin_background.png);
+  width: 20%;
+  height: 20vh;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border: solid 0px transparent;
+  border-radius: 15px;
+}
+.btn_veille {
+  color: #ff632e;
+  background-color: #fbf1d6;
+  padding: 0.5em;
+  border: solid 0px transparent;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.veille_technos:hover {
   box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
 }

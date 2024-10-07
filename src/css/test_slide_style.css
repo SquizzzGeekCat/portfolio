@@ -5,7 +5,7 @@ body {
 .container {
   width: 100%;
   height: 100vh;
-  background-image: url(../assets/image/photo_garde.jpg);
+  background-image: url(../assets/image/fond.png);
   background-position: bottom;
   background-size: cover;
   display: flex;
