@@ -11,22 +11,30 @@
       rel="stylesheet"
     />
     <!-- react -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
     <!-- Inclure ReactDOM depuis un CDN -->
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
     <!-- Babel pour compiler le JSX directement dans le navigateur -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- tailwind script -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
+
     <title>Portefolio -- Ludivine CHOMIK</title>
   </head>
   <body>
     <section class="slide_accueil"></section>
     <aside>
+      <a id="closeBtn" href="#" class="close">X</a>
       <section>
-        <div>
+        <div id="entete">
           <img
             src="../assets/image/logo.png"
             alt="un chat avec des forme géométrique"
@@ -40,8 +48,37 @@
           “Happiness can be found even in the darkest of times, if one only
           remembers to turn on the light.” - Dumbledore.
         </blockquote>
-        <div id="root"></div>
       </section>
+      <div id="nav_mobile">
+        <ul>
+          <li class="nav_item_mobil">
+            <a href="#realisations" class="kavivanar" onclick="closeNav()"
+              >Mes projets</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a
+              href="#skills"
+              class="nav_item_mobil kavivanar"
+              onclick="closeNav()"
+              >Mes skills</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a
+              href="#veille"
+              class="nav_item_mobil kavivanar"
+              onclick="closeNav()"
+              >Mes veilles techno</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a href="#cv" class="nav_item_mobil kavivanar" onclick="closeNav()"
+              >Curriculum Vitae</a
+            >
+          </li>
+        </ul>
+      </div>
       <footer>
         <div class="reseau kavivanar" id="github">
           <img
@@ -61,151 +98,329 @@
         </div>
       </footer>
     </aside>
+    <header>
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+      <img
+        src="../assets/image/logo.png"
+        alt="un chat avec des forme géométrique"
+        id="logo_header"
+      />
+      <h1 class="just-me-again-down-here">Portfolio - Ludivine CHOMIK</h1>
+    </header>
     <nav>
+      <img
+        src="../assets/icons/black_cat.png"
+        alt=""
+        class="icons_deco deco_nav"
+      />
+      <!-- TODO: mettre les links en React et responsive menu burger mettre les choix de theme en coockie et ajouter cookies bot-->
       <ul>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li>
+          <a href="#realisations" class="navLink kavivanar">Mes projets</a>
+        </li>
+        <li><a href="#skills" class="navLink kavivanar">Mes skills</a></li>
+        <li>
+          <a href="#veille" class="navLink kavivanar">Mes veilles techno</a>
+        </li>
+        <li><a href="#cv" class="navLink kavivanar">Curriculum Vitae</a></li>
       </ul>
+
       <dialog id="modal_theme" class="dialog_box">
         <button class="btn_close" autofocus>X</button>
-        <p>Cette boîte de dialogue modale a un arrière-plan festif !</p>
+        <p>Ici on pourra changer de thème plus tard !!</p>
+        <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
       </dialog>
       <button id="btn_open_theme" class="kavivanar">thème</button>
     </nav>
     <main>
       <article id="about_me">
-          <section id="img_about_me">
-            <img src="../assets/image/avatar1.png" alt="" id="img1"/>
-            <img src="../assets/image/avatar2.png" alt="" id="img2"/>
-            <img src="../assets/image/avatar4.png" alt="" id="img4"/>
-          </section>
+        <section id="img_about_me_mobil">
+          <img
+            src="../assets/image/automne1.png"
+            alt=""
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne2.png"
+            alt=""
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne3.png"
+            alt=""
+            class="image_about_me"
+          />
+        </section>
+
+        <section id="img_about_me">
+          <img
+            src="../assets/image/automne1.png"
+            alt=""
+            id="img1"
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne2.png"
+            alt=""
+            id="img2"
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne3.png"
+            alt=""
+            id="img4"
+            class="image_about_me"
+          />
+        </section>
         <section id="txt_about_me">
           <div class="div_about_me_1">
             <h2 class="tt1">About me</h2>
-            <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique architecto obcaecati consectetur, id deserunt corrupti voluptas quos est facere excepturi deleniti, dolor eaque perferendis in atque tempora praesentium magnam nemo!</p>
+            <p class="p1">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Similique architecto obcaecati consectetur, id deserunt corrupti
+              voluptas quos est facere excepturi deleniti, dolor eaque
+              perferendis in atque tempora praesentium magnam nemo!
+            </p>
           </div>
           <div class="div_about_me_2">
             <h2 class="tt2">my hobbies</h2>
-            <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat deleniti eaque soluta aspernatur maiores tempore quas repudiandae suscipit, cum aliquid sit, accusamus, veniam quae. Esse numquam perferendis id veniam cum!</p>
+            <p class="p2">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+              deleniti eaque soluta aspernatur maiores tempore quas repudiandae
+              suscipit, cum aliquid sit, accusamus, veniam quae. Esse numquam
+              perferendis id veniam cum!
+            </p>
           </div>
-          <img class="icon2" src="../assets/icons/spider_trap.png" alt="">
-          <img class="icon1" src="../assets/icons/pumpkin_colored.png" alt="">
+          <img class="icon2" src="../assets/icons/spider_trap.png" alt="" />
+          <img class="icon1" src="../assets/icons/pumpkin_colored.png" alt="" />
         </section>
       </article>
       <article id="realisations">
+        <!-- TODO: mettre les card en REACT -->
         <h2 class="tt3">Mes Réalisations</h2>
+        <img
+          src="../assets/icons/spider_trap.png"
+          alt=""
+          class="icons_deco deco_rea_1"
+        />
         <section id="section_reslisations">
           <div class="card">
             <p class="titleCard just-me-again-down-here">Projet 1</p>
-            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <img
+              src="../assets/icons/pumpkin_colored.png"
+              alt=""
+              class="imgCard"
+            />
             <p class="txtCard">un projet fantastique et épanouissant</p>
             <a href="#" class="btnCard">en savoir plus</a>
           </div>
           <div class="card">
             <p class="titleCard just-me-again-down-here">Projet 2</p>
-            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <img
+              src="../assets/icons/pumpkin_colored.png"
+              alt=""
+              class="imgCard"
+            />
             <p class="txtCard">un projet fantastique et épanouissant</p>
             <a href="#" class="btnCard">en savoir plus</a>
           </div>
           <div class="card">
             <p class="titleCard just-me-again-down-here">Projet 3</p>
-            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <img
+              src="../assets/icons/pumpkin_colored.png"
+              alt=""
+              class="imgCard"
+            />
             <p class="txtCard">un projet fantastique et épanouissant</p>
             <a href="#" class="btnCard">en savoir plus</a>
           </div>
           <div class="card">
             <p class="titleCard just-me-again-down-here">Projet 4</p>
-            <img src="../assets/icons/pumpkin_colored.png" alt="" class="imgCard" />
+            <img
+              src="../assets/icons/pumpkin_colored.png"
+              alt=""
+              class="imgCard"
+            />
             <p class="txtCard">un projet fantastique et épanouissant</p>
             <a href="#" class="btnCard">en savoir plus</a>
           </div>
-      </section>  
+        </section>
+        <img
+          src="../assets/icons/spider_trap.png"
+          alt=""
+          class="icons_deco deco_rea_2"
+        />
       </article>
-      
+      <article id="techno">
+        <img
+          src="../assets/icons/spyder.png"
+          alt=""
+          class="icons_deco deco_tech_1"
+        />
+        <h2>Mes technologies</h2>
+        <section id="sec_techno"></section>
+        <img
+          src="../assets/icons/black_cat.png"
+          alt=""
+          class="icons_deco deco_tech_2"
+        />
+      </article>
       <article id="skills">
+        <img
+          src="../assets/icons/pumpkin_colored.png"
+          alt=""
+          class="icons_deco deco_skill_1"
+        />
+        <!-- TODO: responsive -->
         <section id="soft"></section>
+        <img
+          src="../assets/icons/pumpkin_colored.png"
+          alt=""
+          class="icons_deco deco_skill_2"
+        />
         <section id="hard"></section>
       </article>
       <article id="veille">
+        <!-- TODO: mettre les section en REACT -->
         <h2>Mes veilles technologiques</h2>
+        <img
+          src="../assets/icons/black_cat.png"
+          alt=""
+          class="icons_deco deco_veille"
+        />
         <section>
           <div id="veille1" class="veille_technos">
-          <dialog >
-            <button class="btn_close" autofocus>X</button>
-            <p>Your in the veille 1</p>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 1</button>
-        </div>
-        <div id="veille2" class="veille_technos">
-          <dialog class="dialog_box">
-            <p>Your in the veille 2</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 2</button>
-        </div>
-        <div id="veille3" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 3</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 3</button>
-        </div>
-        <div id="veille4" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 4</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 4</button>
-        </div>
-        <div id="veille5" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 5</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog> 
-          <button class="btn_veille kavivanar">Veille 5</button>
-        </div>
-        <div id="veille6" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 6</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 6</button>
-        </div>
-        <div id="veille7" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 7</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 7</button>
-        </div>
-        <div id="veille8" class="veille_technos">
-          <dialog >
-            <p>Your in the veille 8</p>
-            <button class="btn_close" autofocus >X</button>
-          </dialog>
-          <button class="btn_veille kavivanar">Veille 8</button>
-        </div>
-      </section>
+            <dialog>
+              <button class="btn_close" autofocus>X</button>
+              <a
+                href="../assets/file/cv-chomikludivine-devwebapplication.pdf"
+                target="_blank"
+                >Télécharger le pdf</a
+              >
+            </dialog>
+            <button class="btn_veille kavivanar">
+              L'IA: les générateur de ppt
+            </button>
+          </div>
+          <div id="veille2" class="veille_technos">
+            <dialog class="dialog_box">
+              <p>Your in the veille 2</p>
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">La cybersécurité</button>
+          </div>
+          <div id="veille3" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 3</button>
+          </div>
+          <div id="veille4" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 4</button>
+          </div>
+          <div id="veille5" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 5</button>
+          </div>
+          <div id="veille6" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 6</button>
+          </div>
+          <div id="veille7" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 7</button>
+          </div>
+          <div id="veille8" class="veille_technos">
+            <dialog>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
+              <button class="btn_close" autofocus>X</button>
+            </dialog>
+            <button class="btn_veille kavivanar">Veille 8</button>
+          </div>
+        </section>
       </article>
-      <article id="techno">
-        <section></section>
-      </article>
-      <article id="techCv"></article>
-        <section></section>
+
+      <article id="Curriculum">
+        <section id="contact">
+          <h3>
+            Envie de collaborer avec un développeur passionné et créatif ?
+          </h3>
+
+          <p class="p-2 text-center">
+            Je suis toujours prête à relever de nouveaux défis. N'attendez plus,
+            contactez-moi pour qu’on puisse échanger sur vos projets !
+          </p>
+        </section>
+        <img
+          src="../assets/icons/pumpkin_colored.png"
+          alt=""
+          class="icons_deco deco_cv_1"
+        />
+        <section id="coordonnees">
+          <h3>Mes Coordonnées</h3>
+          <p>06 55 40 56 87</p>
+          <a href="mailto:eric.choimike@gmail.com">eric.choimike@gmail.com</a>
+          <p>12 rue de la liberté, 75001 Paris</p>
+        </section>
+
+        <section id="cv">
+          <h3>Professionnel? Voici mon cv !</h3>
+          <a
+            target="_blank"
+            href="../assets/file/cv-chomikludivine-devwebapplication.pdf"
+            id="btn_download"
+            >Télécharger</a
+          >
+          <img
+            src="../assets/icons/maple_colored.png"
+            alt=""
+            class="icons_deco deco_cv_2"
+          />
+        </section>
       </article>
     </main>
-    <footer></footer>
-  
+    <footer id="main_footer">
+      <img
+        src="../assets/image/logo.png"
+        alt="un chat avec des forme géométrique"
+        id="logo_footer"
+      />
+      <p>© tous droit reserver - Production CHOMIK Ludivine 2024</p>
+    </footer>
+  </body>
   <script src="../js/modal_btn_theme.js"></script>
   <script src="../js/open_veille.js"></script>
   <script src="../js/imgAnimate.js"></script>
-  <script src="../js/progressBar_react.js"></script>
-  
-  <script >
+  <script src="../js/moving_techno.js"></script>
+  <script src="../js/burger_move.js"></script>
+
+  <script>
     tailwind.config = {
       theme: {
         extend: {
@@ -224,5 +439,5 @@
     };
   </script>
   <script type="text/babel" src="../js/progressBar_react.js"></script>
-</body>
+  <script type="text/babel" src="../js/techno_react.js"></script>
 </html>
