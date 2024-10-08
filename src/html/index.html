@@ -26,12 +26,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
+
     <title>Portefolio -- Ludivine CHOMIK</title>
   </head>
   <body>
     <section class="slide_accueil"></section>
     <aside>
-      <!-- TODO: responsive et trouver un fond -->
+      <a id="closeBtn" href="#" class="close">X</a>
       <section>
         <div id="entete">
           <img
@@ -47,8 +48,37 @@
           “Happiness can be found even in the darkest of times, if one only
           remembers to turn on the light.” - Dumbledore.
         </blockquote>
-        <div id="root"></div>
       </section>
+      <div id="nav_mobile">
+        <ul>
+          <li class="nav_item_mobil">
+            <a href="#realisations" class="kavivanar" onclick="closeNav()"
+              >Mes projets</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a
+              href="#skills"
+              class="nav_item_mobil kavivanar"
+              onclick="closeNav()"
+              >Mes skills</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a
+              href="#veille"
+              class="nav_item_mobil kavivanar"
+              onclick="closeNav()"
+              >Mes veilles techno</a
+            >
+          </li>
+          <li class="nav_item_mobil">
+            <a href="#cv" class="nav_item_mobil kavivanar" onclick="closeNav()"
+              >Curriculum Vitae</a
+            >
+          </li>
+        </ul>
+      </div>
       <footer>
         <div class="reseau kavivanar" id="github">
           <img
@@ -68,6 +98,21 @@
         </div>
       </footer>
     </aside>
+    <header>
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+      <img
+        src="../assets/image/logo.png"
+        alt="un chat avec des forme géométrique"
+        id="logo_header"
+      />
+      <h1 class="just-me-again-down-here">Portfolio - Ludivine CHOMIK</h1>
+    </header>
     <nav>
       <img
         src="../assets/icons/black_cat.png"
@@ -88,18 +133,50 @@
 
       <dialog id="modal_theme" class="dialog_box">
         <button class="btn_close" autofocus>X</button>
-        <p>Cette boîte de dialogue modale a un arrière-plan festif !</p>
+        <p>Ici on pourra changer de thème plus tard !!</p>
+        <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
       </dialog>
       <button id="btn_open_theme" class="kavivanar">thème</button>
     </nav>
     <main>
       <article id="about_me">
-        <!-- TODO: responsive -->
+        <section id="img_about_me_mobil">
+          <img
+            src="../assets/image/automne1.png"
+            alt=""
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne2.png"
+            alt=""
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne3.png"
+            alt=""
+            class="image_about_me"
+          />
+        </section>
 
         <section id="img_about_me">
-          <img src="../assets/image/avatar1.png" alt="" id="img1" />
-          <img src="../assets/image/avatar2.png" alt="" id="img2" />
-          <img src="../assets/image/avatar4.png" alt="" id="img4" />
+          <img
+            src="../assets/image/automne1.png"
+            alt=""
+            id="img1"
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne2.png"
+            alt=""
+            id="img2"
+            class="image_about_me"
+          />
+          <img
+            src="../assets/image/automne3.png"
+            alt=""
+            id="img4"
+            class="image_about_me"
+          />
         </section>
         <section id="txt_about_me">
           <div class="div_about_me_1">
@@ -221,55 +298,67 @@
           <div id="veille1" class="veille_technos">
             <dialog>
               <button class="btn_close" autofocus>X</button>
-              <p>Your in the veille 1</p>
+              <a
+                href="../assets/file/cv-chomikludivine-devwebapplication.pdf"
+                target="_blank"
+                >Télécharger le pdf</a
+              >
             </dialog>
-            <button class="btn_veille kavivanar">Veille 1</button>
+            <button class="btn_veille kavivanar">
+              L'IA: les générateur de ppt
+            </button>
           </div>
           <div id="veille2" class="veille_technos">
             <dialog class="dialog_box">
               <p>Your in the veille 2</p>
               <button class="btn_close" autofocus>X</button>
             </dialog>
-            <button class="btn_veille kavivanar">Veille 2</button>
+            <button class="btn_veille kavivanar">La cybersécurité</button>
           </div>
           <div id="veille3" class="veille_technos">
             <dialog>
-              <p>Your in the veille 3</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 3</button>
           </div>
           <div id="veille4" class="veille_technos">
             <dialog>
-              <p>Your in the veille 4</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 4</button>
           </div>
           <div id="veille5" class="veille_technos">
             <dialog>
-              <p>Your in the veille 5</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 5</button>
           </div>
           <div id="veille6" class="veille_technos">
             <dialog>
-              <p>Your in the veille 6</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 6</button>
           </div>
           <div id="veille7" class="veille_technos">
             <dialog>
-              <p>Your in the veille 7</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 7</button>
           </div>
           <div id="veille8" class="veille_technos">
             <dialog>
-              <p>Your in the veille 8</p>
+              <p>Pas de veille pour le moment</p>
+              <img src="../assets/icons/moon.png" alt="" class="deco_modal" />
               <button class="btn_close" autofocus>X</button>
             </dialog>
             <button class="btn_veille kavivanar">Veille 8</button>
@@ -329,6 +418,7 @@
   <script src="../js/open_veille.js"></script>
   <script src="../js/imgAnimate.js"></script>
   <script src="../js/moving_techno.js"></script>
+  <script src="../js/burger_move.js"></script>
 
   <script>
     tailwind.config = {
