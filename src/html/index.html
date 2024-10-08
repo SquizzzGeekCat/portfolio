@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Just+Another+Hand&family=Just+Me+Again+Down+Here&family=Kaushan+Script&family=Kavivanar&display=swap"
       rel="stylesheet"
     />
+    <!-- react -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- Inclure ReactDOM depuis un CDN -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel pour compiler le JSX directement dans le navigateur -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- tailwind script -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS -->
@@ -34,6 +40,7 @@
           “Happiness can be found even in the darkest of times, if one only
           remembers to turn on the light.” - Dumbledore.
         </blockquote>
+        <div id="root"></div>
       </section>
       <footer>
         <div class="reseau kavivanar" id="github">
@@ -112,13 +119,8 @@
           </div>
       </article>
       <article id="skills">
-        <section>
-          <div class="mb-1 text-lg font-medium">Large</div>
-          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700">
-            <div class="h-4 bg-orange rounded-full " style="width: 45%"></div>
-          </div>
-        </section>
-        <section></section>
+        <section id="soft"></section>
+        <section id="hard"></section>
       </article>
       <article id="veille">
         <h2>Mes veilles technologiques</h2>
@@ -189,10 +191,12 @@
       </article>
     </main>
     <footer></footer>
-  </body>
+  
   <script src="../js/modal_btn_theme.js"></script>
   <script src="../js/open_veille.js"></script>
   <script src="../js/imgAnimate.js"></script>
+  <script src="../js/progressBar_react.js"></script>
+  
   <script >
     tailwind.config = {
       theme: {
@@ -211,4 +215,6 @@
       },
     };
   </script>
+  <script type="text/babel" src="../js/progressBar_react.js"></script>
+</body>
 </html>

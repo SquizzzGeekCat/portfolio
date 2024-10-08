@@ -301,7 +301,17 @@ main {
 }
 /* skills */
 #skills {
-  display: none;
+  display: flex;
+  grid-area: 8/1/9/11;
+  gap: 2em;
+}
+#soft,
+#hard {
+  width: 45%;
+  background-color: #f4c581;
+  border: solid 0px transparent;
+  border-radius: 15px;
+  padding: 0.5emc mn;
 }
 /* veille technos */
 #veille {
