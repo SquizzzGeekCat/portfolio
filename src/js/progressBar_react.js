@@ -15,7 +15,7 @@ function ProgressBar({ width, name }) {
 function SoftSkills() {
   return (
     <div>
-      <h2 class="title_skills">Soft Skills</h2>
+      <h2 class="title_skills text-center">Soft Skills</h2>
       <ProgressBar name={"Réactvité"} width={95} />
       <ProgressBar name={"Résolution de problème"} width={90} />
       <ProgressBar name={"Adaptabilité"} width={70} />
@@ -30,7 +30,7 @@ function SoftSkills() {
 function HardSkills() {
   return (
     <div>
-      <h2 class="title_skills">Hard Skills</h2>
+      <h2 class="title_skills text-center">Hard Skills</h2>
       <ProgressBar name={"Développement web"} width={80} />
       <ProgressBar name={"Gestion de projet"} width={80} />
       <ProgressBar name={"Gestion de base de données"} width={90} />

@@ -25,11 +25,12 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
+  background-color: black;
   gap: 2em;
   /* changer le gap au final a 3 */
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(17, 1fr);
-  background-color: #fefaf4;
+  /* background-color: #fefaf4; */
 }
 h1,
 h2,
@@ -61,7 +62,92 @@ pre {
   width: 5em;
   height: 5em;
 }
+/* scrollbar */
+body {
+  --sb-track-color: #000000;
+  --sb-thumb-color: #ff632e;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+/* deco icons */
+.deco_nav {
+  position: absolute;
+  bottom: 0;
+  right: 8.5em;
+}
+.deco_rea_1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+.deco_rea_2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+.deco_tech_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.deco_tech_2 {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+}
+.deco_skill_2 {
+  position: absolute;
+  top: 0;
+  left: 6em;
+}
+.deco_skill_1 {
+  position: absolute;
+  top: 0;
+  right: 6em;
+}
+.deco_cv_1 {
+  position: absolute;
+  top: -3.5em;
+  left: 11em;
+}
+.deco_cv_2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
+.deco_veille {
+  position: absolute;
+  top: 1.5em;
+  right: 2em;
+}
 /* slide accueil */
+#entete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .slide_accueil {
   display: none;
 }
@@ -96,7 +182,11 @@ aside {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to bottom, #ff632e 50%, #f4c581, #fbf1d6);
+  background-image: url(../assets/image/spooky_pumpking.jpg);
+  background-size: cover;
+  background-position: center;
+  border-right: solid 1px #ff632e;
+  /* background: linear-gradient(to bottom, #ff632e 50%, #f4c581, #fbf1d6); */
   color: white;
 }
 aside footer {
@@ -112,7 +202,7 @@ aside footer {
 }
 aside footer a {
   text-decoration: none;
-  color: black;
+  color: white;
   margin-left: 0.5em;
 }
 .reseau {
@@ -141,12 +231,14 @@ aside section {
   opacity: 0.75;
 }
 nav {
-  grid-area: 1 / 3 / 1 / 12;
+  grid-area: 1 / 4 / 1 / 11;
+  position: relative;
   display: flex;
   height: 10vh;
   justify-content: space-around;
   border: solid 1px transparent;
   border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   border-right-width: 0px;
   border-left-width: 0px;
   align-items: center;
@@ -160,24 +252,25 @@ nav ul {
 }
 li,
 #btn_open_theme {
-  border: solid 1px white;
+  border: solid 0px transparent;
   border-radius: 15px;
   margin-inline: 0.5em;
   padding-block: 0.5em;
   padding-inline: 2em;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background-color: #ff632e;
+  background-color: #f4c581;
 }
 li:hover {
   background-color: #84c08e;
+  color: white;
   box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
 }
 .navLink {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 #btn_open_theme {
-  color: white;
+  color: black;
 }
 #btn_open_theme:hover {
   background-color: #84c08e;
@@ -247,6 +340,7 @@ article {
 #txt_about_me {
   width: 55%;
   border: solid 1px #ff632e;
+  background-color: #fbf1d6;
   border-radius: 15px;
   display: grid;
   gap: 1em;
@@ -285,6 +379,7 @@ article {
 }
 /* realisations */
 #realisations {
+  position: relative;
   display: flex;
   border: solid 1px #f4c581;
   border-radius: 15px;
@@ -294,6 +389,7 @@ article {
   justify-content: space-evenly;
   padding: 2em;
 }
+
 #section_reslisations {
   display: flex;
   align-items: center;
@@ -336,6 +432,7 @@ article {
 }
 /* skills */
 #skills {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -357,7 +454,10 @@ article {
 }
 /* veille technos */
 #veille {
-  border: solid 2px #f4c581;
+  border: solid 2px #fbf1d6;
+
+  background-color: #fbf1d6;
+  position: relative;
   border-radius: 15px;
   margin-top: 1em;
   width: 100%;
@@ -401,8 +501,10 @@ article {
 /* technos */
 #techno {
   width: 100%;
-  border: solid 2px #ff632e;
+  border: solid 2px #fbf1d6;
+  background-color: #fbf1d6;
   border-radius: 15px;
+  position: relative;
 }
 #techno h2 {
   text-align: center;
@@ -447,6 +549,7 @@ article {
 /* cv */
 #Curriculum {
   margin-top: 1em;
+  position: relative;
   width: 100%;
   padding: 1em;
   display: flex;
@@ -472,6 +575,7 @@ article {
 }
 #cv {
   width: 30%;
+  position: relative;
   border: solid 2px #84c08e;
   border-radius: 15px;
   padding: 0.5em;
@@ -495,13 +599,14 @@ article {
 }
 /* footer */
 #main_footer {
-  grid-area: 18/3/18/12;
+  grid-area: 18/4/18/11;
   display: flex;
   height: 10vh;
   padding-inline: 2em;
   justify-content: space-between;
   border: solid 1px transparent;
   border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   border-right-width: 0px;
   border-left-width: 0px;
   align-items: center;
