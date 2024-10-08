@@ -44,6 +44,9 @@ h6 {
 h2 {
   font-size: 2em;
 }
+h3 {
+  font-size: 1.5em;
+}
 p,
 label,
 a,
@@ -187,6 +190,9 @@ main {
   justify-content: space-around;
   height: 200vh;
 }
+article {
+  margin-block: 5em;
+}
 /* about me */
 #about_me {
   display: flex;
@@ -325,16 +331,23 @@ main {
 /* skills */
 #skills {
   display: flex;
-  grid-area: 8/1/9/11;
+  justify-content: space-evenly;
+  width: 100%;
   gap: 2em;
+  margin-block: 5em;
 }
 #soft,
 #hard {
-  width: 45%;
+  width: 40%;
   background-color: #f4c581;
   border: solid 0px transparent;
   border-radius: 15px;
-  padding: 0.5emc mn;
+  padding-inline: 2em;
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+}
+.title_skills {
+  font-size: 2.5em;
 }
 /* veille technos */
 #veille {
@@ -378,4 +391,53 @@ main {
 }
 .veille_technos:hover {
   box-shadow: 26px 26px 21px 8px rgba(0, 0, 0, 0.1);
+}
+/* technos */
+#techno {
+  width: 100%;
+  border: solid 2px #ff632e;
+  border-radius: 15px;
+}
+#techno h2 {
+  text-align: center;
+  font-size: 2em;
+}
+#sec_techno {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_techno {
+  width: 50%;
+}
+.inner-techno {
+  border: solid 0px transparent;
+  border-radius: 15px;
+  transition: scale 2s ease;
+}
+.img_techno:nth-child(odd):hover {
+  background-color: #ff632e;
+  border: solid 1px #ff632e;
+  border-radius: 100%;
+  width: 6em;
+  height: 6em;
+  padding: 0.5em;
+  transform: scale(150%);
+}
+.img_techno:nth-child(even):hover {
+  background-color: #84c08e;
+  border: solid 1px #84c08e;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  padding: 0.5em;
+  transform: scale(150%);
+}
+.size_spe {
+  width: 5em;
+  height: 6em;
+}
+/* footer */
+footer {
 }
