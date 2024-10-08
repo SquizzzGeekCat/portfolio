@@ -71,13 +71,16 @@
     <nav>
       <!-- TODO: mettre les links en React et responsive menu burger mettre les choix de theme en coockie et ajouter cookies bot-->
       <ul>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
-        <li><a href="#" class="navLink kavivanar">qwerty</a></li>
+        <li>
+          <a href="#realisations" class="navLink kavivanar">Mes projets</a>
+        </li>
+        <li><a href="#skills" class="navLink kavivanar">Mes skills</a></li>
+        <li>
+          <a href="#veille" class="navLink kavivanar">Mes veilles techno</a>
+        </li>
+        <li><a href="#cv" class="navLink kavivanar">Curriculum Vitae</a></li>
       </ul>
+      <img src="../assets/icons/sitting_cat.png" alt="" class="icons_deco" />
       <dialog id="modal_theme" class="dialog_box">
         <button class="btn_close" autofocus>X</button>
         <p>Cette boîte de dialogue modale a un arrière-plan festif !</p>
@@ -234,15 +237,40 @@
         </section>
       </article>
 
-      <article id="techCv">
-        <section></section>
+      <article id="Curriculum">
+        <section id="contact">
+          <h3>
+            Envie de collaborer avec un développeur passionné et créatif ?
+          </h3>
+
+          <p class="p-2 text-center">
+            Je suis toujours prête à relever de nouveaux défis. N'attendez plus,
+            contactez-moi pour qu’on puisse échanger sur vos projets !
+          </p>
+        </section>
+        <section id="coordonnees">
+          <h3>Mes Coordonnées</h3>
+          <p>06 55 40 56 87</p>
+          <a href="mailto:eric.choimike@gmail.com">eric.choimike@gmail.com</a>
+          <p>12 rue de la liberté, 75001 Paris</p>
+        </section>
+
+        <section id="cv">
+          <h3>Professionnel? Voici mon cv !</h3>
+          <a
+            target="_blank"
+            href="../assets/file/cv-chomikludivine-devwebapplication.pdf"
+            id="btn_download"
+            >Télécharger</a
+          >
+        </section>
       </article>
     </main>
-    <footer>
+    <footer id="main_footer">
       <img
         src="../assets/image/logo.png"
         alt="un chat avec des forme géométrique"
-        class="logo"
+        id="logo_footer"
       />
       <p>© tous droit reserver - Production CHOMIK Ludivine 2024</p>
     </footer>
